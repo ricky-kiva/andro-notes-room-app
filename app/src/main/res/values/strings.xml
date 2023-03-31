@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">Note Room App</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="submit">Submit</string>
+    <string name="delete">Delete</string>
+    <string name="date">Date</string>
+    <string name="message_undo">Cancel delete item?</string>
+    <string name="message_ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="empty">Field cannot be blank</string>
+    <string name="update">Update</string>
+    <string name="change">Change</string>
+    <string name="add">Add</string>
+    <string name="save">Save</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="message_cancel">Cancel update form?</string>
+    <string name="message_delete">Delete this item?</string>
+    <string name="added">1 item successfully added</string>
+    <string name="changed">1 item successfully updated</string>
+    <string name="deleted">1 item successfully deleted</string>
 </resources>

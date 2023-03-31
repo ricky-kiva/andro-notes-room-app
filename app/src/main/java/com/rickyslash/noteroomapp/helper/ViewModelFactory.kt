@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.rickyslash.noteroomapp.ui.insert.NoteAddUpdateViewModel
 import com.rickyslash.noteroomapp.ui.main.MainViewModel
 
+// this class helps to add 'custom parameter' to 'ViewModelFactory'
 class ViewModelFactory private constructor(private val mApplication: Application): ViewModelProvider.NewInstanceFactory() {
     companion object {
         @Volatile

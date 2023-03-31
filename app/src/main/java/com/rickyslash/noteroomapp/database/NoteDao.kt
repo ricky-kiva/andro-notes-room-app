@@ -8,6 +8,8 @@ import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
 
+// this is DAO (Data Access Object), interface that contains methods to access  database
+// it also 'specifies SQL queries' & 'mapping of query' result to 'entity'
 @Dao
 interface NoteDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)

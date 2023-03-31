@@ -6,6 +6,8 @@ import com.rickyslash.noteroomapp.database.Note
 import com.rickyslash.noteroomapp.repository.NoteRepository
 
 class NoteAddUpdateViewModel(application: Application): ViewModel() {
+
+    // making instance for NoteRepository
     private val mNoteRepository: NoteRepository = NoteRepository(application)
 
     fun insert(note: Note) {

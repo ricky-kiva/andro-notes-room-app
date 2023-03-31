@@ -7,6 +7,8 @@ import com.rickyslash.noteroomapp.database.Note
 import com.rickyslash.noteroomapp.repository.NoteRepository
 
 class MainViewModel(application: Application): ViewModel() {
+
+    // making instance for NoteRepository
     private val mNoteRepository: NoteRepository = NoteRepository(application)
 
     fun getAllNotes(): LiveData<List<Note>> = mNoteRepository.getAllNotes()

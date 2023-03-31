@@ -5,15 +5,22 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
+// defining Room Database using SQLite Abstraction (Room Persistence Library)
+// define database schema, 'Note::class' is the entity, and 'version' is 'your database version'
 @Database(entities = [Note::class], version = 1)
+// 'abstract class' is a class that 'can have abstract method'
 abstract class NoteRoomDatabase: RoomDatabase() {
+
+    // 'abstract method' is a method that 'is declared', but 'not implemented' (not defined) in a class
+    // 'only abstract class' 'can have abstract method'
     abstract fun noteDao(): NoteDao
 
     companion object {
-        @Volatile
+        @Volatile // this means the variable will be manipulated by multiple threads concurrently
         private var INSTANCE: NoteRoomDatabase? = null
 
-        @JvmStatic
+        // function to make singleton instance of this class
+        @JvmStatic // this annotation will generate static method for 'Java' so it could be accessed directly. It has no relevancy for Kotlin
         fun getDatabase(context: Context): NoteRoomDatabase {
             if (INSTANCE == null) {
                 synchronized(NoteRoomDatabase::class.java) {
@@ -24,6 +31,4 @@ abstract class NoteRoomDatabase: RoomDatabase() {
             return INSTANCE as NoteRoomDatabase
         }
     }
-
-
 }

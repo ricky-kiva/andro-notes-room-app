@@ -11,13 +11,19 @@ import com.rickyslash.noteroomapp.helper.NoteDiffCallback
 import com.rickyslash.noteroomapp.ui.insert.NoteAddUpdateActivity
 
 class NoteAdapter: RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
+
+    // making listNotes
     private val listNotes = ArrayList<Note>()
 
     fun setListNotes(listNotes: List<Note>) {
+        // instantiating NoteDiffCallback()
         val diffCallback = NoteDiffCallback(this.listNotes, listNotes)
+        // this return 'DiffResult' that contains information about items that has been added, removed, or updated between old & new list
         val diffResult = DiffUtil.calculateDiff(diffCallback)
+        // clearing old listNotes then adds all listNotes
         this.listNotes.clear()
         this.listNotes.addAll(listNotes)
+        // dispatching updates to the adapter
         diffResult.dispatchUpdatesTo(this)
     }
 

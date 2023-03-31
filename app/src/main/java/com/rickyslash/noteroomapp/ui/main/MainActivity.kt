@@ -33,6 +33,7 @@ class MainActivity : AppCompatActivity() {
         adapter = NoteAdapter()
 
         binding?.rvNotes?.layoutManager = LinearLayoutManager(this)
+        // this set to Fixed because the number of the item can be controlled by us, unlike data from outside API
         binding?.rvNotes?.setHasFixedSize(true)
         binding?.rvNotes?.adapter = adapter
 

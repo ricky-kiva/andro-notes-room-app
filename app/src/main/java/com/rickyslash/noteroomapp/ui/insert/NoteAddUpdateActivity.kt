@@ -20,7 +20,9 @@ class NoteAddUpdateActivity : AppCompatActivity() {
 
     private lateinit var noteAddUpdateActivityViewModel: NoteAddUpdateViewModel
 
+    // this is lazy initialization pattern. it defer object until it's actually needed
     private var _activityNoteAddUpdateBinding: ActivityNoteAddUpdateBinding? = null
+    // by this, '_activityNoteAddUpdateBinding' will only 'get' value when 'binding' is called
     private val binding get() = _activityNoteAddUpdateBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -106,6 +108,7 @@ class NoteAddUpdateActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
+    // this run when user press the 'back button of the device'
     override fun onBackPressed() {
         showAlertDialog(ALERT_DIALOG_CLOSE)
     }

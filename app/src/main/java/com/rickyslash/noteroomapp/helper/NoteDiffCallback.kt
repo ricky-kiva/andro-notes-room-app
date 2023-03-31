@@ -3,6 +3,7 @@ package com.rickyslash.noteroomapp.helper
 import androidx.recyclerview.widget.DiffUtil
 import com.rickyslash.noteroomapp.database.Note
 
+// this used to help check changes in listNotes in NoteAdapter
 class NoteDiffCallback(private val mOldNoteList: List<Note>, private val mNewNoteList: List<Note>): DiffUtil.Callback() {
     override fun getOldListSize(): Int {
         return mOldNoteList.size
